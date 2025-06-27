@@ -1,18 +1,10 @@
 package com.example.demo.controller;
 
-<<<<<<< HEAD
 import com.example.demo.Entity.Proposal;
 import com.example.demo.service.ProposalServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
-=======
-import com.example.demo.DTO.ProposalRequest;
-import com.example.demo.DTO.ProposalResponse;
-import com.example.demo.service.ProposalService;
-import lombok.RequiredArgsConstructor;
-import org.springframework.http.ResponseEntity;
->>>>>>> 29c1f66 (Initial project upload)
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -22,7 +14,6 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ProposalController {
 
-<<<<<<< HEAD
     private final ProposalServiceImpl proposalService;
 
     @PostMapping("/submit/{userId}")
@@ -79,21 +70,3 @@ public class ProposalController {
 
 }
 
-=======
-    private final ProposalService proposalService;
-
-    // ✅ Submit new proposal
-    @PostMapping("/submit")
-    public ResponseEntity<ProposalResponse> submitProposal(@RequestBody ProposalRequest request) {
-        ProposalResponse response = proposalService.submitProposal(request);
-        return ResponseEntity.ok(response);
-    }
-
-    // ✅ Get all proposals for a user
-    @GetMapping("/user/{userId}")
-    public ResponseEntity<List<ProposalResponse>> getUserProposals(@PathVariable Long userId) {
-        List<ProposalResponse> proposals = proposalService.getProposalsByUserId(userId);
-        return ResponseEntity.ok(proposals);
-    }
-}
->>>>>>> 29c1f66 (Initial project upload)
