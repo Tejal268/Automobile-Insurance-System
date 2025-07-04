@@ -1,7 +1,7 @@
 package com.example.demo.service;
 
-import com.example.demo.DTO.ProposalRequest;
-import com.example.demo.DTO.ProposalResponse;
+import com.example.demo.dto.ProposalRequest;
+import com.example.demo.dto.ProposalResponse;
 
 import java.util.List;
 

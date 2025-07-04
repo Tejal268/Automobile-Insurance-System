@@ -9,6 +9,11 @@ import org.springframework.security.config.annotation.authentication.configurati
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource; // ✅ CORRECT for MVC apps
+
+import org.springframework.web.cors.CorsConfigurationSource;
+
 
 @Configuration
 @RequiredArgsConstructor
@@ -40,6 +45,25 @@ public class SecurityConfig {
             .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
+    }
+    
+    @Bean
+    public CorsConfigurationSource corsConfigurationSource() {
+        CorsConfiguration config = new CorsConfiguration();
+        
+        // ✅ Set allowed origin to your Angular app (adjust if needed)
+        config.addAllowedOrigin("http://localhost:55481");
+        
+        // ✅ Set to true only if you are using cookies or Authorization headers
+        config.setAllowCredentials(true);
+
+        config.addAllowedHeader("*");
+        config.addAllowedMethod("*");
+
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        source.registerCorsConfiguration("/**", config);
+
+        return source;
     }
 
 }
