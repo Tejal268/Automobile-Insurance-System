@@ -10,6 +10,10 @@ import java.time.LocalDate;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+<<<<<<< HEAD
+=======
+@Builder
+>>>>>>> 29c1f66 (Initial project upload)
 public class Payment {
 
     @Id

@@ -1,9 +1,11 @@
 package com.example.demo.DTO;
 
+
 import lombok.Data;
 
 @Data
-public class LoginRequest {
+public class RegisterRequest {
+    private String name;
     private String email;
     private String password;
 }

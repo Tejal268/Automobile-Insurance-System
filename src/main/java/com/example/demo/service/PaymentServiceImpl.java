@@ -1,5 +1,6 @@
 package com.example.demo.service;
 
+<<<<<<< HEAD
 import com.example.demo.Entity.*;
 import com.example.demo.repository.PaymentRepository;
 import com.example.demo.repository.ProposalRepository;
@@ -92,4 +93,8 @@ public class PaymentServiceImpl {
         proposal.setStatus(ProposalStatus.PAID);
         proposalRepository.save(proposal);
     }
+=======
+public class PaymentServiceImpl {
+
+>>>>>>> 29c1f66 (Initial project upload)
 }

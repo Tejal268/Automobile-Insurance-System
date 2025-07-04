@@ -1,5 +1,6 @@
 package com.example.demo.service;
 
+<<<<<<< HEAD
 import com.example.demo.Entity.Proposal;
 import com.example.demo.Entity.Quote;
 import com.example.demo.Exceptions.QuoteNotFoundException;
@@ -37,4 +38,8 @@ public class QuoteServiceImpl {
     public List<Quote> getAllQuotes() {
         return quoteRepository.findAll();
     }
+=======
+public class QuoteServiceImpl {
+
+>>>>>>> 29c1f66 (Initial project upload)
 }

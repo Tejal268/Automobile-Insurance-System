@@ -1,6 +1,9 @@
 package com.example.demo.Entity;
 
+<<<<<<< HEAD
 import com.fasterxml.jackson.annotation.JsonIgnore;
+=======
+>>>>>>> 29c1f66 (Initial project upload)
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -11,6 +14,10 @@ import java.time.LocalDate;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+<<<<<<< HEAD
+=======
+@Builder
+>>>>>>> 29c1f66 (Initial project upload)
 public class Proposal {
 
     @Id
@@ -18,6 +25,7 @@ public class Proposal {
     private Long id;
 
     private String vehicleNumber;
+<<<<<<< HEAD
     private String vehicleType;
     private LocalDate registrationDate;
     
@@ -31,3 +39,17 @@ public class Proposal {
     @Transient
     private Long userId; // Used for response only
 }
+=======
+
+    private String vehicleType;
+
+    private LocalDate registrationDate;
+
+    private String status; // e.g., PENDING, APPROVED, REJECTED
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+}
+
+>>>>>>> 29c1f66 (Initial project upload)
